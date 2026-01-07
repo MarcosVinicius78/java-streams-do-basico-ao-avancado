@@ -19,8 +19,8 @@ public class Exercicio6 {
         Random random = new Random();
 
         for (int i = 1; i <= 10; i++) {
-            int idade = random.nextInt(1, 30);
-            Pessoa novaPessoa = new Pessoa("Pessoa" + i, idade, "Cidade"+i);
+            int idade = random.nextInt(1, 100);
+            Pessoa novaPessoa = new Pessoa("Pessoa" + i, idade, "Cidade"+idade);
 
             listaPessoas.add(novaPessoa);
         }
