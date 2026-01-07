@@ -4,19 +4,17 @@ import java.util.Random;
 
 public class Exercicio6 {
 
-    private static List<Pessoa> listaPessoas;
-
     public static void main(String[] args) {
 
-        gerarPessoas();
+        List<Pessoa> listaPessoas = gerarPessoas();
 
         listaPessoas.stream()
                 .filter(pessoa -> pessoa.getIdade() >= 18)
                 .forEach(System.out::println);
     }
 
-    public static void gerarPessoas() {
-        listaPessoas = new ArrayList<>();
+    public static List<Pessoa> gerarPessoas() {
+        List<Pessoa> listaPessoas = new ArrayList<>();
 
         Random random = new Random();
 
@@ -26,5 +24,7 @@ public class Exercicio6 {
 
             listaPessoas.add(novaPessoa);
         }
+
+        return listaPessoas;
     }
 }
